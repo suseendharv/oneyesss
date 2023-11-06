@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family:Helvetica;
+            background-color: #f2f2f2;
+            background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc1o4_Dm5SRL1kz_QZBOFotO2WYz4u9VwzAg&usqp=CAU');
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment:fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            font-size:18px;
+            font-weight:bold;
+            background-image:url('https://marketplace.canva.com/EAEtlMvlBDg/1/0/900w/canva-pastel-peach-watercolour-mobile-phone-wallpaper--8ZGLXxywc8.jpg');
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment:fixed;
+            color:black;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 510px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 20px;
+           
+        }
+
+        h2 {
+            text-align: center;
+            font-family:Georgia;
+            color:black;
+            margin-bottom:0px;
+            margin-top:2px;
+            
+        }
+        label{
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            display: block;
+            margin-bottom: 25px;
+            outline:none;
+            border-radius:0px;
+            height:18px;
+            
+        }
+
+        input[type="text"], input[type="password"], input[type="number"],input[type="date"] {
+            width: 94%;
+            height:18px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+        }
+
+        select {
+            width: 98%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+            
+        }
+
+        .button {
+            background-color: darkviolet;
+            color: #fff;
+            border: none;
+            width:200px;
+            height:35px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left:155px;
+        }
+
+        .button:hover {
+            background-color: violet;
+        }
+        .button:focus{
+            background-color: red;
+        }
+        label[for="name"]{
+            margin-top:30px;
+        }
+        hr{
+            background-color: #333;
+            border: 0;
+            height: 3px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2><hr>
+        
+        <form action="/register" method="post">
+            @csrf
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Enter Name" id="name" name="name" maxlength="20">
+
+            <label for="email">Email:</label>
+            <input type="text" placeholder="Enter Email" id="email" name="email" maxlength="20">
+
+            <label for="password">Password:</label>
+            <input type="password" placeholder="Enter password" id="password" name="password" maxlength="20">
+
+            <label for="phone_number">Phone Number:</label>
+            <input type="number" placeholder="Enter phone no" id="phone_number" name="phone_number">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" maxlength="10">
+
+            <label for="gender">Gender:</label>
+            <select id="gender"  name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <label for="language">Language:</label>
+            <input type="text" placeholder="Enter Language" id="language" name="language" maxlength="10">
+
+            <label for="zipcode">Zip Code:</label>
+            <input type="number" placeholder="Enter Zipcode" id="zipcode" name="zipcode">
+
+            <label for="doorno">Door Number:</label>
+            <input type="number" placeholder="Enter Door Number" id="doorno" name="doorno">
+
+            <label for="city">City:</label>
+            <input type="text" placeholder="Enter City" id="city" name="city" maxlength="50">
+
+            <label for="state">State:</label>
+            <input type="text" placeholder="Enter State" id="state" name="state" maxlength="50">
+
+            <label for="country">Country:</label>
+            <input type="text" placeholder="Enter Country" id="country" name="country" maxlength="50"><br><br>
+
+            <input type="submit" value="Submit" class="button">
+        </form>
+    </div>
+</body>
+</html>
